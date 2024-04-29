@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+//Ok dude
+
+
 public class JoyConList : MonoBehaviour
 {
     public GameObject[] JCList;
