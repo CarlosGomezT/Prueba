@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4984754770247132329}
   - component: {fileID: 4525566239835328085}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: Marker 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9d2866a2847cf4b48bba18925f0a170e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 280511180183198552}
   - component: {fileID: 4376339301904493334}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Marker 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9d2866a2847cf4b48bba18925f0a170e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 5857302259955351207}
   - component: {fileID: 4204512170223404192}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: Marker 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9d2866a2847cf4b48bba18925f0a170e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 2236972529218472131}
   - component: {fileID: 1081902473978406916}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Marker 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -294,7 +294,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9d2866a2847cf4b48bba18925f0a170e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -317,6 +317,7 @@ GameObject:
   - component: {fileID: 4070565633030025360}
   - component: {fileID: 8886366178076065658}
   - component: {fileID: 2883007035033793663}
+  - component: {fileID: 7759744484133660632}
   m_Layer: 5
   m_Name: MarkerContainer
   m_TagString: Untagged
@@ -430,7 +431,25 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 1
-  m_CellSize: {x: 70, y: 70}
-  m_Spacing: {x: 50, y: 0}
+  m_CellSize: {x: 60, y: 60}
+  m_Spacing: {x: 20, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 4
+--- !u!114 &7759744484133660632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8864904816233629582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09086ba37a286944981d7b706ed38f6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markers:
+  - {fileID: 1081902473978406916}
+  - {fileID: 4376339301904493334}
+  - {fileID: 4525566239835328085}
+  - {fileID: 4204512170223404192}
+  manager: {fileID: 0}

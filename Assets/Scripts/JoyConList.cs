@@ -8,8 +8,13 @@ using UnityEngine.UIElements;
 
 public class JoyConList : MonoBehaviour
 {
+    public JoyconManager j;
     public GameObject[] JCList;
 
+    private void Start()
+    {
+        Debug.Log("Controles " + j.j.Count);
+    }
     public void AcomodarControllers(int posicion, int controlPresionado)
     {
         GameObject temp = JCList[posicion];
