@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class ControlMarkerUI : MonoBehaviour
 {
     public Image[] markers;
-    public Color ColorRgb;
+    public Color ColorGreen;
+    public Color ColorRed;
     public JoyconManager manager;
 
     private void Start()
@@ -17,9 +18,13 @@ public class ControlMarkerUI : MonoBehaviour
 
     public void SetColorScreen ()
     {
+        foreach (Image marcador in markers)
+        {
+            marcador.color = ColorRed;
+        }
         for (int i = 0; i<manager.j.Count; i++)
         {
-            markers[i].color = ColorRgb;
+            markers[i].color = ColorGreen;
         }
     }
 
