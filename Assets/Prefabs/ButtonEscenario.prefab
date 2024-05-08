@@ -170,8 +170,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.2288889}
   m_AnchorMax: {x: 0.99000007, y: 1}
-  m_AnchoredPosition: {x: 105.42, y: -6.5000076}
-  m_SizeDelta: {x: -203.83691, y: -71.84561}
+  m_AnchoredPosition: {x: 89.8161, y: -6.5000076}
+  m_SizeDelta: {x: -172.6292, y: -54.2912}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &3768771205014379342
 CanvasRenderer:
@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 1794043990928356280}
   - component: {fileID: 6550457686767421512}
   - component: {fileID: 6549181121140542928}
+  - component: {fileID: 3539912230719044716}
   m_Layer: 5
   m_Name: ButtonEscenario
   m_TagString: Untagged
@@ -333,4 +334,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6550457686767421512}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3539912230719044716}
+        m_TargetAssemblyTypeName: UIMenuButSelection, Assembly-CSharp
+        m_MethodName: GlobalScenarioSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3539912230719044716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4788570143407126402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d928358cb690b254db0e2b2c5924ef2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelSelected: 0

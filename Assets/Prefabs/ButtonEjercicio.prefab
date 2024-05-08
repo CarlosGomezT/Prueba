@@ -436,6 +436,7 @@ GameObject:
   - component: {fileID: 1794043990928356280}
   - component: {fileID: 6550457686767421512}
   - component: {fileID: 6549181121140542928}
+  - component: {fileID: 8326848373135237710}
   m_Layer: 5
   m_Name: ButtonEjercicio
   m_TagString: Untagged
@@ -548,6 +549,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8326848373135237710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4788570143407126402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d928358cb690b254db0e2b2c5924ef2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7291564007337073772
 GameObject:
   m_ObjectHideFlags: 0

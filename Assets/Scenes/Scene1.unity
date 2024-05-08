@@ -3277,6 +3277,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3708767065656794798, guid: 463eda9b75d2cc344a3ae7b6c3104b68, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708767065656794798, guid: 463eda9b75d2cc344a3ae7b6c3104b68, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708767065656794798, guid: 463eda9b75d2cc344a3ae7b6c3104b68, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1953606968}
+    - target: {fileID: 3708767065656794798, guid: 463eda9b75d2cc344a3ae7b6c3104b68, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708767065656794798, guid: 463eda9b75d2cc344a3ae7b6c3104b68, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Retry
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708767065656794798, guid: 463eda9b75d2cc344a3ae7b6c3104b68, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameStateManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708767065656794798, guid: 463eda9b75d2cc344a3ae7b6c3104b68, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3708767066047834011, guid: 463eda9b75d2cc344a3ae7b6c3104b68, type: 3}
       propertyPath: m_SizeDelta.x
       value: 90
@@ -3519,23 +3547,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3708767065656794798, guid: 463eda9b75d2cc344a3ae7b6c3104b68, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3708767065656794798, guid: 463eda9b75d2cc344a3ae7b6c3104b68, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 226957888}
+      objectReference: {fileID: 1953606968}
     - target: {fileID: 3708767065656794798, guid: 463eda9b75d2cc344a3ae7b6c3104b68, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3708767065656794798, guid: 463eda9b75d2cc344a3ae7b6c3104b68, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: TogglePause
       objectReference: {fileID: 0}
     - target: {fileID: 3708767065656794798, guid: 463eda9b75d2cc344a3ae7b6c3104b68, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: GameStateManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3708767065656794798, guid: 463eda9b75d2cc344a3ae7b6c3104b68, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -4152,6 +4180,34 @@ PrefabInstance:
     - target: {fileID: 3708767065656794797, guid: 463eda9b75d2cc344a3ae7b6c3104b68, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708767065656794798, guid: 463eda9b75d2cc344a3ae7b6c3104b68, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708767065656794798, guid: 463eda9b75d2cc344a3ae7b6c3104b68, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708767065656794798, guid: 463eda9b75d2cc344a3ae7b6c3104b68, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1953606968}
+    - target: {fileID: 3708767065656794798, guid: 463eda9b75d2cc344a3ae7b6c3104b68, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708767065656794798, guid: 463eda9b75d2cc344a3ae7b6c3104b68, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708767065656794798, guid: 463eda9b75d2cc344a3ae7b6c3104b68, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameStateManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708767065656794798, guid: 463eda9b75d2cc344a3ae7b6c3104b68, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3708767065656794799, guid: 463eda9b75d2cc344a3ae7b6c3104b68, type: 3}
       propertyPath: m_Color.b
@@ -4789,7 +4845,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -4820,17 +4876,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 226957888}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1953606968}
+        m_TargetAssemblyTypeName: GameStateManager, Assembly-CSharp
+        m_MethodName: TogglePause
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1803945232
 MonoBehaviour:
@@ -4974,6 +5030,7 @@ GameObject:
   - component: {fileID: 1953606966}
   - component: {fileID: 1953606965}
   - component: {fileID: 1953606967}
+  - component: {fileID: 1953606968}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5023,6 +5080,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1580244244}
+--- !u!114 &1953606968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953606964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb68ff39f586e7e4a968bbee66d750f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIPause: {fileID: 226957888}
+  levelToLoad: MenuScreen
 --- !u!1 &1965449837
 GameObject:
   m_ObjectHideFlags: 0
