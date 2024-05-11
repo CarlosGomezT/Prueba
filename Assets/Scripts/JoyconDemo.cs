@@ -18,6 +18,7 @@ public class JoyconDemo : MonoBehaviour {
     public Vector3 gyro;
     public Vector3 accel;
     public int jc_ind = 0;
+    public int originalPos = 0;
     public Quaternion orientation;
 
     void Start ()
@@ -28,6 +29,7 @@ public class JoyconDemo : MonoBehaviour {
         accel = new Vector3(0, 0, 0);
         // get the public Joycon array attached to the JoyconManager in scene
         joycons = JoyconManager.Instance.j;
+		originalPos = jc_ind;
 		if (joycons.Count < jc_ind+1){
 			Destroy(gameObject);
 		}
@@ -108,7 +110,11 @@ public class JoyconDemo : MonoBehaviour {
 
 	public void SetControl(int NewController)
 	{
-		
 		jc_ind= NewController;
 	}
+	public void JcVibrate(int vibrate)
+	{
+        Joycon j = joycons[vibrate];
+        j.SetRumble(160, 320, 0.6f, 200);
+    }
 }

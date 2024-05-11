@@ -15,9 +15,6 @@ public class GlobalManager : MonoBehaviour
         cantidadTriggers = 0;
         cambioDisponible = false;
     }
-    void Update()
-    {
-    }
 
     IEnumerator HabilitarCambio()
     {
