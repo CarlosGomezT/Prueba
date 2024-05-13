@@ -10,6 +10,16 @@ public class LoadControlOrder : MonoBehaviour
  
     private void Start()
     {
+        if (StaticData.FirstTime == false)
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                {
+                    StaticData.ListaDeControles[i] = i;
+                }
+            }
+            StaticData.FirstTime = true;
+        }
     }
     public void RecoverControlList ()
     {
