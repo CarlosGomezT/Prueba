@@ -17,10 +17,7 @@ public class DestruirObjetos : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "pelota")
-        {
-            Destroy(other.gameObject);
-        }
-        
+        Destroy(this.gameObject);
+
     }
 }
