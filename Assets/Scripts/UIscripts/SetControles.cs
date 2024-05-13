@@ -9,9 +9,11 @@ public class SetControles : MonoBehaviour
     public ControlEscenas[] ConectedControlers;
     public JoyconManager manager;
     public JoyConList managerList;
+    private int frameCount = 0;
 
     private void Start()
     {
+        StartCoroutine(EsperarFrames(3));
     }
 
     public void SetControllsInScreen()
@@ -49,4 +51,17 @@ public class SetControles : MonoBehaviour
             Debug.Log("Lista de controles, posicion " + StaticData.ListaDeControles[i]);
         }
     }
+
+    IEnumerator EsperarFrames(int frames)
+    {
+        while (frameCount < frames)
+        {
+            yield return null;
+            frameCount++;
+            SetControllsInScreen() ;
+        }
+
+    }
+
+    
 }
