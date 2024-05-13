@@ -49,7 +49,7 @@ public class JoyconDemo : MonoBehaviour {
 				Debug.Log(string.Format("Stick x: {0:N} Stick y: {1:N}",j.GetStick()[0],j.GetStick()[1]));
             
 				// Joycon has no magnetometer, so it cannot accurately determine its yaw value. Joycon.Recenter allows the user to reset the yaw value.
-				j.Recenter ();
+				
 			}
 			// GetButtonDown checks if a button has been released
 			if (j.GetButtonUp (Joycon.Button.SHOULDER_2))
@@ -76,15 +76,7 @@ public class JoyconDemo : MonoBehaviour {
 			}
 
 			if(j.GetButtonDown (Joycon.Button.PLUS) || j.GetButtonDown(Joycon.Button.MINUS))
-			{
-				if (GlobalManager.cambioDisponible)
-				{
-					Debug.Log("Si se puede hacer el cambio");
-					Lista.AcomodarControllers(0, jc_ind);
-					GlobalManager.BackToNormal();
-
-				}
-				//Debug.Log("Bottones presionados");
+			{j.Recenter();
 			}
 
 			//if (!j.GetButtonDown (Joycon.Button.PLUS))

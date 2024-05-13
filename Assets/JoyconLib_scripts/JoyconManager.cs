@@ -77,7 +77,7 @@ public class JoyconManager: MonoBehaviour
     {
 		for (int i = 0; i < j.Count; ++i)
 		{
-			Debug.Log (i);
+			//Debug.Log (i);
 			Joycon jc = j [i];
 			byte LEDs = 0x0;
 			LEDs |= (byte)(0x1 << i);
@@ -94,7 +94,7 @@ public class JoyconManager: MonoBehaviour
 		}
     }
 
-    void OnApplicationQuit()
+    public void OnApplicationQuit()
     {
 		for (int i = 0; i < j.Count; ++i)
 		{

@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-//Ok dude
-
-
 public class JoyConList : MonoBehaviour
 {
     public JoyconManager j;
@@ -17,16 +14,21 @@ public class JoyConList : MonoBehaviour
     }
     public void AcomodarControllers(int posicionOrigen, int posicionDestino)
     {
+        int tempo = JCList[posicionOrigen].originalPos;
+        int temp = JCList[posicionOrigen].jc_ind;
+        //JCList[posicionOrigen] = JCList[posicionDestino];
+        //JCList[posicionDestino] = temp;
 
-        JoyconDemo temp = JCList[posicionOrigen];
-        JCList[posicionOrigen] = JCList[posicionDestino];
-        JCList[posicionDestino] = temp;
 
-        JCList[posicionOrigen].jc_ind = posicionOrigen;
-        JCList[posicionDestino].jc_ind = posicionDestino; 
+        JCList[posicionOrigen].jc_ind = JCList[posicionDestino].jc_ind;
+        JCList[posicionDestino].jc_ind = temp;
+        
+        JCList[posicionOrigen].originalPos = JCList[posicionDestino].originalPos;
+        JCList[posicionDestino].originalPos = tempo;
+        
 
-        Debug.Log("Control " + (posicionOrigen) + " acomodado");
 
+        Debug.Log("Control " + (posicionOrigen) + " acomodado a posicion "+ posicionDestino);
         //GameObject temp = JCList[posicion];
         //JCList[posicion] = JCList[controlPresionado];
         //JCList[controlPresionado] = temp;

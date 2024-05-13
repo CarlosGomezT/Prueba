@@ -33,10 +33,10 @@ public class UIValidatePersonalizacion : MonoBehaviour
         StaticData.repeticionesNivel = BotonesMasMenos[1].value;
         StaticData.descansosTiempo = BotonesMasMenos[2].value;
 
+
         switch (StaticData.ejercicioSeleccionado)
         {
             case 1:
-
                 SceneManager.LoadScene("Scene1");
                 print();
 

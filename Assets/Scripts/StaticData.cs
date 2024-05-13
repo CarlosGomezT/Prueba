@@ -10,6 +10,9 @@ public class StaticData : MonoBehaviour
     public static int repeticionesNivel;
     public static int descansosTiempo;
 
+    public static int[] ListaDeControles = new int[4];
+    public static bool FirstTime = false;
+
     private void Start()
     {
         ejercicioSeleccionado = 1;
@@ -17,6 +20,18 @@ public class StaticData : MonoBehaviour
         seriesNivel = 3;
         repeticionesNivel = 20;
         descansosTiempo = 15;
+
+        if (FirstTime == false)
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                {
+                    ListaDeControles[i] = i;
+                    Debug.Log("---------------------------");
+                }
+            }
+            FirstTime = true;
+        }
     }
 }
 

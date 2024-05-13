@@ -47,9 +47,10 @@ public class UIBotonesCambio : MonoBehaviour
             selectedButton = clickedButton;
 
             selectedButton.image.color = Color.green;
-            Debug.Log("NUMEROS: " + Boton1 + " " + Boton2);
+            Debug.Log("NUMEROS Presionados: " + Boton1 + " y " + Boton2);
+
             ControladorDeControles.ArrangeScreenControls(Boton1, Boton2);
-            ControladorDeControles.SetControllsInScreen();
+            
             StartValuesEmplty();
         }
     }
@@ -58,12 +59,12 @@ public class UIBotonesCambio : MonoBehaviour
         if (selectedButton == null)
         {
             Boton1 = posicion;
-            Debug.Log("Seleccionada la posicion"+ posicion);
+            Debug.Log("Seleccionada la posicion "+ posicion);
         }
         else
         {
             Boton2 = posicion;
-            Debug.Log("Seleccionada la posicion"+ posicion);
+            Debug.Log("Seleccionada la posicion "+ posicion);
         }
 
     }
@@ -73,6 +74,11 @@ public class UIBotonesCambio : MonoBehaviour
         Boton1 = -1;
         Boton2 = -1;
         selectedButton = null;
+        
+        foreach (Button button in buttonsElement)
+        {
+            button.image.color = Color.cyan;
+        }
     }
 
 }

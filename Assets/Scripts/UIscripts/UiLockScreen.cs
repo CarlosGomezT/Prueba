@@ -23,7 +23,6 @@ public class UiLockScreen : MonoBehaviour
             if (manager.j.Count >= LockLevel[i])
             {
                 lockScreen[i].interactable = true;
-                Debug.Log(i);
             }
         }
     }

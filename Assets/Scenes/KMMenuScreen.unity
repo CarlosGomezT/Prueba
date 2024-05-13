@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 138377114}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2380,6 +2380,7 @@ MonoBehaviour:
   gyro: {x: 0, y: 0, z: 0}
   accel: {x: 0, y: 0, z: 0}
   jc_ind: 1
+  originalPos: 0
   orientation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &196292494
 GameObject:
@@ -2739,6 +2740,7 @@ MonoBehaviour:
   gyro: {x: 0, y: 0, z: 0}
   accel: {x: 0, y: 0, z: 0}
   jc_ind: 2
+  originalPos: 0
   orientation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!23 &250149500
 MeshRenderer:
@@ -5060,7 +5062,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: dfdd51b77a576f441a2f49beb91ab036, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dfdd51b77a576f441a2f49beb91ab036, type: 3}
       propertyPath: m_LocalScale.x
@@ -7587,6 +7589,7 @@ MonoBehaviour:
   gyro: {x: 0, y: 0, z: 0}
   accel: {x: 0, y: 0, z: 0}
   jc_ind: 0
+  originalPos: 0
   orientation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!23 &875453839
 MeshRenderer:
@@ -14015,6 +14018,7 @@ MonoBehaviour:
   gyro: {x: 0, y: 0, z: 0}
   accel: {x: 0, y: 0, z: 0}
   jc_ind: 0
+  originalPos: 0
   orientation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!23 &1707407228
 MeshRenderer:
@@ -16300,7 +16304,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1953606966}
-  - component: {fileID: 1953606965}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -16308,18 +16311,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1953606965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1953606964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65ad96c5c07334e4b8b3c03f941546d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1953606966
 Transform:
   m_ObjectHideFlags: 0

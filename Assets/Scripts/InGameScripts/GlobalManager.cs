@@ -7,10 +7,12 @@ public class GlobalManager : MonoBehaviour
     public static bool cambioDisponible;
     public delegate void TriggerEvent();
     public static event TriggerEvent Interaction;
-
     public static int cantidadTriggers;
+    public LoadControlOrder CargarControles;
+
     void Start ()
     {
+        CargarControles.RecoverControlList();
         Interaction += incrementar;
         cantidadTriggers = 0;
         cambioDisponible = false;
