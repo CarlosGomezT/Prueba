@@ -14,7 +14,7 @@ public class LoadLevelEscenario : MonoBehaviour
         }
         catch
         {
-            EscenarioToShow[3].SetActive(true);
+            EscenarioToShow[0].SetActive(true);
         }
     }
 }

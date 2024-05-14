@@ -9,6 +9,10 @@ public class GameStateManager : MonoBehaviour
     public GameObject UIPause;
     public string levelToLoad = "MenuScreen";
 
+    private void Start()
+    {
+        //StartCoroutine(EsperarFrames(3));
+    }
     public void TogglePause()
     {
         Stats.TogglePauseState();
@@ -16,22 +20,22 @@ public class GameStateManager : MonoBehaviour
         if (UIPause.activeSelf)
         {
             PauseAudioInMenu(true);
-            Time.timeScale = 0f;
+            FreezeTime();
         }
         else
         {
-            Time.timeScale = 1f;
+            UnFreezeTime();
             PauseAudioInMenu(false);
         }
     }
     public void Retry()
     {
-        Time.timeScale = 1f;
+        UnFreezeTime();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void Menu()
     {
-        Time.timeScale = 1f;
+        UnFreezeTime();
         SceneManager.LoadScene(levelToLoad);
     }
     public void PauseAudioInMenu(bool pause)
@@ -53,4 +57,23 @@ public class GameStateManager : MonoBehaviour
             }
         }
     }
+    public void UnFreezeTime()
+    {
+            Time.timeScale = 1f;
+    }
+    public void FreezeTime()
+    {
+            Time.timeScale = 0f;
+    }
+
+    //IEnumerator EsperarFrames(int frames)
+    //{
+    //    int frameCount = 0;
+    //    while (frameCount < frames)
+    //    {
+    //        yield return null;
+    //        frameCount++;
+    //    }
+    //    FreezeTime();
+    //}
 }

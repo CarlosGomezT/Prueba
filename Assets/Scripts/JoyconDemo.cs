@@ -76,7 +76,11 @@ public class JoyconDemo : MonoBehaviour {
 			}
 
 			if(j.GetButtonDown (Joycon.Button.PLUS) || j.GetButtonDown(Joycon.Button.MINUS))
-			{j.Recenter();
+			{
+				foreach (Joycon s in joycons)
+				{
+					j.Recenter();
+				}
 			}
 
 			//if (!j.GetButtonDown (Joycon.Button.PLUS))
@@ -108,5 +112,12 @@ public class JoyconDemo : MonoBehaviour {
 	{
         Joycon j = joycons[vibrate];
         j.SetRumble(160, 320, 0.6f, 200);
+    }
+	public void RecalibrateAllJoycons()
+	{
+        foreach (Joycon joys in joycons)
+        {
+            joys.Recenter();
+        }
     }
 }
