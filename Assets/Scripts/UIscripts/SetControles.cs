@@ -13,7 +13,7 @@ public class SetControles : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(EsperarFrames(3));
+        StartCoroutine(EsperarFrames(2));
     }
 
     public void SetControllsInScreen()

@@ -66,14 +66,12 @@ public class GameStateManager : MonoBehaviour
             Time.timeScale = 0f;
     }
 
-    //IEnumerator EsperarFrames(int frames)
-    //{
-    //    int frameCount = 0;
-    //    while (frameCount < frames)
-    //    {
-    //        yield return null;
-    //        frameCount++;
-    //    }
-    //    FreezeTime();
-    //}
+    public void WaitSeconds(GameObject Canva)
+    { 
+    }
+
+    IEnumerator EsperarSegundos(int Segs)
+    {
+        yield return new WaitForSeconds(Segs);
+    }
 }

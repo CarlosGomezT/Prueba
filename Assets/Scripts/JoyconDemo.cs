@@ -77,10 +77,7 @@ public class JoyconDemo : MonoBehaviour {
 
 			if(j.GetButtonDown (Joycon.Button.PLUS) || j.GetButtonDown(Joycon.Button.MINUS))
 			{
-				foreach (Joycon s in joycons)
-				{
-					j.Recenter();
-				}
+				RecalibrateAllJoycons();
 			}
 
 			//if (!j.GetButtonDown (Joycon.Button.PLUS))

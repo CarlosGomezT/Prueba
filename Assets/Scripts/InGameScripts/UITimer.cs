@@ -9,6 +9,10 @@ public class UITimer : MonoBehaviour
     TextMeshProUGUI timerText;
     float timeElapsed;
 
+    private void Start()
+    {
+        timeElapsed = 0;
+    }
     void Update()
     {
         timeElapsed += Time.deltaTime;
@@ -16,4 +20,10 @@ public class UITimer : MonoBehaviour
         int seconds = Mathf.FloorToInt(timeElapsed % 60);
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
+
+    public void TiempoReiniciado()
+    {
+        timeElapsed = 0;
+    }
+
 }
