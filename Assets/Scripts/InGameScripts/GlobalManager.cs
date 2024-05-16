@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GlobalManager : MonoBehaviour
 {
-    public static bool cambioDisponible;
     public delegate void TriggerEvent();
     public static event TriggerEvent Interaction;
     public static int cantidadTriggers;
@@ -15,32 +14,6 @@ public class GlobalManager : MonoBehaviour
         CargarControles.RecoverControlList();
         Interaction += incrementar;
         cantidadTriggers = 0;
-        cambioDisponible = false;
-    }
-
-    IEnumerator HabilitarCambio()
-    {
-        Debug.Log("Se habilito el cambio");
-        cambioDisponible = true;
-        yield return new WaitForSeconds(10);
-        BackToNormal();
-    }
-
-    public static void BackToNormal()
-    {
-        if(!cambioDisponible)
-        { 
-            return;
-        }
-        cambioDisponible=false;
-
-        Debug.Log("Se devolvio el estado a falso");
-    }
-
-    public void PresionarBoton()
-    {
-        StopAllCoroutines();
-        StartCoroutine(HabilitarCambio());
     }
 
     public static void StartInteraccion()

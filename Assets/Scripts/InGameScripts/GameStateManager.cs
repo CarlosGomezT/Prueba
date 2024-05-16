@@ -1,17 +1,19 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameStateManager : MonoBehaviour
 {
     public GameObject UIPause;
+    public static bool ContinuePlayRoutine = true;
     public string levelToLoad = "MenuScreen";
 
     private void Start()
     {
-        //StartCoroutine(EsperarFrames(3));
+        ContinuePlayRoutine = true;
     }
     public void TogglePause()
     {

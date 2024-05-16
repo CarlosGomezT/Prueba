@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class DestruirObjetos : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
 
     // Update is called once per frame
     void Update()
@@ -17,7 +13,16 @@ public class DestruirObjetos : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(this.gameObject);
+        if (other.CompareTag("Mano"))
+        {
+            ManoPersonaje collisionAPelota = other.GetComponent<ManoPersonaje>();
 
+            if (collisionAPelota.Ocupado == false)
+            {
+                collisionAPelota.AparecerPelota();
+                collisionAPelota.Ocupado = true;
+                Destroy(gameObject);
+            }
+        }
     }
 }

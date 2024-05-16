@@ -9,7 +9,12 @@ public class StartGameScene : MonoBehaviour
     public UITimer Timer;
     private void Start()
     {
+        Invoke("StartClear", .1f);
+    }
+    public void StartClear()
+    {
         Timer.TiempoReiniciado();
         JoyConList.JCList[0].RecalibrateAllJoycons();
+
     }
 }

@@ -16,33 +16,27 @@ public class AnimacionesVControlador : MonoBehaviour
     void Start()
     {
         velocidadAnimacion = GetComponent<Animator>();
-        InvokeRepeating("CambioDeVelocidad", 0f, interCambio);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-    private void CambioDeVelocidad()
-    {
-        int numAleatorio = Random.Range(0, 3);
-
-        switch (numAleatorio)
-        {
-            case 0:
-                velocidadAnimacion.speed = vMinima;
-                Debug.Log("minima");
-                break;
-            case 1:
-                velocidadAnimacion.speed = vMedia;
-                Debug.Log("media");
-                break;
-            case 2:
-                velocidadAnimacion.speed = vMaxima;
-                Debug.Log("maxima");
-                break;
-            default: break;
-        }
-    }
+    //private void CambioDeVelocidad()
+    //{
+    //    int numAleatorio = Random.Range(0, 3);
+    //
+    //    switch (numAleatorio)
+    //    {
+    //        case 0:
+    //            velocidadAnimacion.speed = vMinima;
+    //            Debug.Log("minima");
+    //            break;
+    //        case 1:
+    //            velocidadAnimacion.speed = vMedia;
+    //            Debug.Log("media");
+    //            break;
+    //        case 2:
+    //            velocidadAnimacion.speed = vMaxima;
+    //            Debug.Log("maxima");
+    //            break;
+    //        default: break;
+    //    }
+    //}
 }
