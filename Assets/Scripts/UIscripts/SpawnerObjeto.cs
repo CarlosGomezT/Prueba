@@ -115,7 +115,9 @@ public class SpawnerObjeto : MonoBehaviour
         if (repeatCoroutine == null)
         {
             repeatCoroutine = StartCoroutine(RepeatAction(tiempoRepeat));
+            Debug.Log("=0=0===0=00=0=00=0=0=");
         }
+        Debug.Log("StartRepeating");
     }
     public void StopRepeating()
     {
@@ -124,6 +126,7 @@ public class SpawnerObjeto : MonoBehaviour
             StopCoroutine(repeatCoroutine);
             repeatCoroutine = null;
         }
+        Debug.Log("StopRepeating");
     }
 
     IEnumerator RepeatAction(float tiempoRepeat)
@@ -134,5 +137,7 @@ public class SpawnerObjeto : MonoBehaviour
             CallSpawner();
             yield return new WaitForSeconds(tiempoRepeat);
         }
+        Debug.Log("RepeatAction");
+        StopRepeating();
     }
 }

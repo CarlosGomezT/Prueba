@@ -12,9 +12,15 @@ public class InGameStats : MonoBehaviour
     private TextMeshProUGUI textoContadorSeries;
     [SerializeField]
     private TextMeshProUGUI textoInstruccion;
+    [SerializeField]
+    private ManagerDescansos managerDescansos;
+    [SerializeField]
+    private GameStateManager EndGame;
+
 
     void Start()
     {
+        StaticData.descansosTiempo = 4;
         StaticData.repeticionesNivel = 3;
         StaticData.seriesNivel = 2;
         Invoke("StartInteraccion", .1f);
@@ -25,10 +31,16 @@ public class InGameStats : MonoBehaviour
         StaticData.repeticionesNivel = 2;
         StaticData.seriesNivel = 2;
 
-        textoContadorRepeticiones.text = GlobalManager.cantidadTriggers.ToString() + " / " + StaticData.repeticionesNivel;
-        textoContadorSeries.text = GlobalManager.seriesCantidad + " / " + StaticData.seriesNivel;
+        UpdateScreenValues();
+
         textoInstruccion.text = "Atrape y guarde " + StaticData.repeticionesNivel + " pelotas en su canasta";
         GlobalManager.Interaction += UpdateTexts; 
+    }
+
+    public void UpdateScreenValues()
+    {
+        textoContadorRepeticiones.text = GlobalManager.cantidadTriggers.ToString() + " / " + StaticData.repeticionesNivel;
+        textoContadorSeries.text = GlobalManager.seriesCantidad + " / " + StaticData.seriesNivel;
     }
 
     public void UpdateTexts()
@@ -39,9 +51,18 @@ public class InGameStats : MonoBehaviour
         }
         else
         {
-            textoContadorRepeticiones.text = GlobalManager.cantidadTriggers + " / " + StaticData.repeticionesNivel;
-            GameStateManager.ContinuePlayRoutine = false;
-            GlobalManager.CanGrab = false;
+            if( GlobalManager.seriesCantidad == StaticData.seriesNivel)
+            {
+                EndGame.ToggleWin();
+                EndGame.Scene.SetActive(false);
+            }
+            else
+            {
+                textoContadorRepeticiones.text = GlobalManager.cantidadTriggers + " / " + StaticData.repeticionesNivel;
+                GameStateManager.ContinuePlayRoutine = false;
+                GlobalManager.CanGrab = false;
+                managerDescansos.EsperarEsconderPantalla();
+            }
         }
     }
 }

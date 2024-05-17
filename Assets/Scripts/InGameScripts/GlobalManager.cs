@@ -14,6 +14,7 @@ public class GlobalManager : MonoBehaviour
 
     void Start ()
     {
+        Interaction = delegate { };
         CargarControles.RecoverControlList();
         Interaction += incrementar;
         cantidadTriggers = 0;

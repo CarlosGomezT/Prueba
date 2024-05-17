@@ -7,7 +7,7 @@ public class UITimer : MonoBehaviour
 {
     [SerializeField]
     TextMeshProUGUI timerText;
-    float timeElapsed;
+    public float timeElapsed;
 
     private void Start()
     {

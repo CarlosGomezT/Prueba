@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class GameStateManager : MonoBehaviour
 {
     public GameObject UIPause;
+    public GameObject UIWin;
+    public GameObject Scene;
     public static bool ContinuePlayRoutine = true;
     public string levelToLoad = "MenuScreen";
 
@@ -30,9 +32,28 @@ public class GameStateManager : MonoBehaviour
             PauseAudioInMenu(false);
         }
     }
+    public void ToggleWin()
+    {
+        Stats.TogglePauseState();
+        UIWin.SetActive(!UIWin.activeSelf);
+        if (UIWin.activeSelf)
+        {
+            PauseAudioInMenu(true);
+            FreezeTime();
+        }
+    }
     public void Retry()
     {
         UnFreezeTime();
+        StopAllCoroutines();
+        GameObject[] allObjects = FindObjectsOfType<GameObject>();
+        foreach (GameObject obj in allObjects)
+        {
+            if (obj != this.gameObject)
+            {
+                Destroy(obj);
+            }
+        }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void Menu()

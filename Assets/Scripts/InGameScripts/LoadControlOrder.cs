@@ -28,7 +28,6 @@ public class LoadControlOrder : MonoBehaviour
         for (int i = 0; i < manager.j.Count; i++)
         {
             ClaseLista.JCList[i].jc_ind = ListaOrig[i];
-            Debug.Log("Debug ===== " + ListaOrig[i]);
             ClaseLista.JCList[i].originalPos = ListaOrig[i];
         }
     }
