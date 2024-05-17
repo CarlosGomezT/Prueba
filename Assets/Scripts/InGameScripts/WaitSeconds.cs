@@ -31,6 +31,4 @@ public class WaitSeconds : MonoBehaviour
     {
         textoTemporizador.text = tiempoRestante.ToString("0");
     }
-    
-
 }

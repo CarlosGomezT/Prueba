@@ -4,23 +4,16 @@ using UnityEngine;
 
 public class DestruirObjetos : MonoBehaviour
 {
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Mano"))
         {
             ManoPersonaje collisionAPelota = other.GetComponent<ManoPersonaje>();
 
-            if (collisionAPelota.Ocupado == false)
+            if (GlobalManager.Ocupado == false &&  GlobalManager.CanGrab == true)
             {
                 collisionAPelota.AparecerPelota();
-                collisionAPelota.Ocupado = true;
+                GlobalManager.Ocupado = true;
                 Destroy(gameObject);
             }
         }

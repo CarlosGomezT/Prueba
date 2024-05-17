@@ -15,6 +15,5 @@ public class StartGameScene : MonoBehaviour
     {
         Timer.TiempoReiniciado();
         JoyConList.JCList[0].RecalibrateAllJoycons();
-
     }
 }

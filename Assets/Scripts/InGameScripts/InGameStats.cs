@@ -7,22 +7,41 @@ using Unity.VisualScripting.Antlr3.Runtime.Misc;
 public class InGameStats : MonoBehaviour
 {
     [SerializeField]
-    private TextMeshProUGUI textoContador;
-
+    private TextMeshProUGUI textoContadorRepeticiones;
     [SerializeField]
-    private TextMeshProUGUI textoTiempo;
-
+    private TextMeshProUGUI textoContadorSeries;
+    [SerializeField]
+    private TextMeshProUGUI textoInstruccion;
 
     void Start()
     {
-        textoContador.text = "Contador " +GlobalManager.cantidadTriggers.ToString();
-        textoTiempo.text = "Contador 2";
-        GlobalManager.Interaction+= UpdateTexts;
-        
+        StaticData.repeticionesNivel = 3;
+        StaticData.seriesNivel = 2;
+        Invoke("StartInteraccion", .1f);
+    }
+
+    public void StartInteraccion()
+    {
+        StaticData.repeticionesNivel = 2;
+        StaticData.seriesNivel = 2;
+
+        textoContadorRepeticiones.text = GlobalManager.cantidadTriggers.ToString() + " / " + StaticData.repeticionesNivel;
+        textoContadorSeries.text = GlobalManager.seriesCantidad + " / " + StaticData.seriesNivel;
+        textoInstruccion.text = "Atrape y guarde " + StaticData.repeticionesNivel + " pelotas en su canasta";
+        GlobalManager.Interaction += UpdateTexts; 
     }
 
     public void UpdateTexts()
     {
-        textoContador.text = "Contador" + GlobalManager.cantidadTriggers.ToString();
+        if(StaticData.repeticionesNivel > GlobalManager.cantidadTriggers)
+        {
+            textoContadorRepeticiones.text = GlobalManager.cantidadTriggers + " / " + StaticData.repeticionesNivel;
+        }
+        else
+        {
+            textoContadorRepeticiones.text = GlobalManager.cantidadTriggers + " / " + StaticData.repeticionesNivel;
+            GameStateManager.ContinuePlayRoutine = false;
+            GlobalManager.CanGrab = false;
+        }
     }
 }

@@ -7,6 +7,9 @@ public class GlobalManager : MonoBehaviour
     public delegate void TriggerEvent();
     public static event TriggerEvent Interaction;
     public static int cantidadTriggers;
+    public static int seriesCantidad;
+    public static bool Ocupado;
+    public static bool CanGrab;
     public LoadControlOrder CargarControles;
 
     void Start ()
@@ -14,6 +17,9 @@ public class GlobalManager : MonoBehaviour
         CargarControles.RecoverControlList();
         Interaction += incrementar;
         cantidadTriggers = 0;
+        seriesCantidad = 1;
+        Ocupado = false;
+        CanGrab = true;
     }
 
     public static void StartInteraccion()
@@ -26,6 +32,6 @@ public class GlobalManager : MonoBehaviour
 
     public void incrementar() 
     { 
-        cantidadTriggers++;
+        cantidadTriggers= cantidadTriggers+1;
     }
 }
