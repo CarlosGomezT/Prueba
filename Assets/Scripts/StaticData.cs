@@ -33,6 +33,11 @@ public class StaticData : MonoBehaviour
             FirstTime = true;
         }
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
 
 

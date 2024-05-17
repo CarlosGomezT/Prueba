@@ -48,7 +48,7 @@ public class SpawnerObjeto : MonoBehaviour
     void MoverySpawnearGravity()
     {
         GameObject pelota = Instantiate(objetoSpawn, puntoC.position, Quaternion.identity);
-        Vector3 posicionObjetivo = puntoD.position + new Vector3(Random.Range(-RadioSpawn * .8f, RadioSpawn * .6f), Random.Range(-RadioSpawn, RadioSpawn), 0f);
+        Vector3 posicionObjetivo = puntoD.position + new Vector3(Random.Range(-RadioSpawn * .65f, RadioSpawn * .45f), Random.Range(-RadioSpawn*.9f, RadioSpawn * .9f), 0f);
 
 
         GameObject objetivo = Instantiate(objetivoPrefab, posicionObjetivo, Quaternion.identity);

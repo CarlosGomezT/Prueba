@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 138377114}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12848,6 +12848,13 @@ MonoBehaviour:
   puntoD: {fileID: 2091393093}
   velocidad: 30
   tiempoSpawn: 1
+  Gravity: 0
+  Fuerza: 0
+  FuerzaUp: 0
+  pelotaPrefab: {fileID: 0}
+  objetivoPrefab: {fileID: 0}
+  RadioSpawn: 0
+  animationPersonaje: {fileID: 0}
 --- !u!1 &1552772540
 GameObject:
   m_ObjectHideFlags: 0
@@ -16335,7 +16342,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1893765429}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15fdcc1f8dd8540419fd2e6cfd2173bf, type: 3}
   m_Name: 

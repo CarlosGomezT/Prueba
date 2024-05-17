@@ -20,16 +20,11 @@ public class InGameStats : MonoBehaviour
 
     void Start()
     {
-        StaticData.descansosTiempo = 4;
-        StaticData.repeticionesNivel = 3;
-        StaticData.seriesNivel = 2;
         Invoke("StartInteraccion", .1f);
     }
 
     public void StartInteraccion()
     {
-        StaticData.repeticionesNivel = 2;
-        StaticData.seriesNivel = 2;
 
         UpdateScreenValues();
 
