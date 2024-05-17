@@ -16,6 +16,14 @@ public class StatsWinScreen : MonoBehaviour
         int seconds = Mathf.FloorToInt(timeElapsed % 60);
         Tiempo.text = string.Format("{0:00}:{1:00}", minutes, seconds);
 
-        Stats.text = StaticData.seriesNivel + " series de " + StaticData.repeticionesNivel + " repeticiónes cada una. \n Por un total de " + (StaticData.repeticionesNivel *StaticData.seriesNivel) + " repeticiónes.";
+        if (StaticData.repeticionesNivel == 1)
+        {
+            Stats.text = StaticData.seriesNivel + " serie de " + StaticData.repeticionesNivel + " repeticiones cada una. \n Por un total de " + (StaticData.repeticionesNivel *StaticData.seriesNivel) + " repeticiones.";
+        }
+        else
+        {
+            Stats.text = StaticData.seriesNivel + " series de " + StaticData.repeticionesNivel + " repeticiones cada una. \n Por un total de " + (StaticData.repeticionesNivel *StaticData.seriesNivel) + " repeticiones.";
+        }
+        
     }
 }
