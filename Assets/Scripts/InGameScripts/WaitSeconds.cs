@@ -9,6 +9,8 @@ public class WaitSeconds : MonoBehaviour
     public TMP_Text textoTemporizador;
     public GameObject Manage;
     public GameObject Manage2;
+    public GameObject Manage3;
+   
 
     public void EsperarEsconderPantalla()
     {
@@ -24,6 +26,16 @@ public class WaitSeconds : MonoBehaviour
             tiempoRestante -= 1;
         }
         Manage.SetActive(false);
+        Manage3.SetActive(true);
+
+        tiempoRestante = tiempoEspera;
+
+        while (tiempoRestante > 0)
+        {
+            yield return new WaitForSeconds(1);
+            tiempoRestante -= 1;
+        }
+        Manage3.SetActive(false);
         Manage2.SetActive(true);
     }
 
