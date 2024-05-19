@@ -6,7 +6,7 @@ public class AnimacionesVControlador : MonoBehaviour
 {
     private Animator velocidadAnimacion;
 
-    private float interCambio = 4.0f;
+    //private float interCambio = 4.0f;
 
     public float vMinima = 0.5f;
     public float vMedia = 1.0f;

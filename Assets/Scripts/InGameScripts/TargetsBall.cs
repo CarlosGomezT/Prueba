@@ -6,12 +6,14 @@ using UnityEngine.Animations;
 public class TargetsBall : MonoBehaviour
 {
     public GameObject target; // Asigna el objeto que quieres seguir en el inspector
+    public float TimeToAppear;
+    public float TimeToDisappear;
     public Animator AnimationToPlay;
     public LookAtConstraint lookAtConstraint;
 
     private void Start()
     {
-        Invoke("EsperarRealizarAccion", .8f);
+        Invoke("EsperarRealizarAccion", TimeToAppear);
         Camera camara = Camera.main;
 
         if (camara != null)
@@ -34,7 +36,7 @@ public class TargetsBall : MonoBehaviour
     private void EsperarRealizarAccion()
     {
         AnimationToPlay.Play("TargetAnimation");
-        Invoke("DestruirObjeto", 5f);     
+        Invoke("DestruirObjeto", TimeToDisappear);     
     }
 
     private void DestruirObjeto()

@@ -28,12 +28,12 @@ Transform:
   m_GameObject: {fileID: 5679467429512511908}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.24, z: -0.71}
-  m_LocalScale: {x: 2.1, y: 2.1, z: 2.1}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: -2.1, y: 2.1, z: 2.1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7446001242526412058}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!212 &3750219398841217064
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -96,7 +96,7 @@ Animator:
   m_GameObject: {fileID: 5679467429512511908}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d81f02b87df6f624e908149d522908c5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 055c29544058c0446b7b82295daeeaa6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 2690742786127525275}
   - component: {fileID: 6515332915900373781}
   m_Layer: 0
-  m_Name: InstanciaObjetivo
+  m_Name: InstanciaAnimacion 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 7369144608762119254}
-  TimeToAppear: 0.8
-  TimeToDisappear: 5
+  TimeToAppear: 0
+  TimeToDisappear: 2.4
   AnimationToPlay: {fileID: 1109754047146262698}
   lookAtConstraint: {fileID: 5405655702285028475}

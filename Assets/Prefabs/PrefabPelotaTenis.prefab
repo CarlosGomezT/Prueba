@@ -128,3 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc442e8efc9f44c4283ce21c149b4fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Mensajes:
+  - {fileID: 7369144608762119254, guid: 72ba1243abd089b4991c915009f47ca2, type: 3}
+  - {fileID: 7369144608762119254, guid: 25e479eebed6934499543d204075a37c, type: 3}
+  - {fileID: 7369144608762119254, guid: 943314c35c1757845a7ceedbdcd5f79b, type: 3}
