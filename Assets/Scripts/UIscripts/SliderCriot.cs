@@ -10,6 +10,11 @@ public class SliderCriot : MonoBehaviour
     [SerializeField] private Slider _slider;
     [SerializeField] private TMP_Text sliderText;
 
+    private void Update()
+    {
+        sliderText.text = _slider.value.ToString("0");
+    }
+
     private void Start()
     {
         _slider.onValueChanged.AddListener((v) =>

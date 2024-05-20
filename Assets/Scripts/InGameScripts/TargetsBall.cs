@@ -11,6 +11,7 @@ public class TargetsBall : MonoBehaviour
     public Animator AnimationToPlay;
     public LookAtConstraint lookAtConstraint;
 
+
     private void Start()
     {
         Invoke("EsperarRealizarAccion", TimeToAppear);
