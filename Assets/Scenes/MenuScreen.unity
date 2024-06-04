@@ -1500,7 +1500,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 400.245, y: -622.2045}
-  m_SizeDelta: {x: 700, y: 149.672}
+  m_SizeDelta: {x: 675.0834, y: 149.672}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &100275865
 MonoBehaviour:
@@ -8263,7 +8263,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pulse el icono del indicaror para vibrar el control asociado
+  m_text: Pulse el icono del indicador para vibrar el control asociado
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a336bc5af0ab72e4aa4a06cbb4b2210c, type: 2}
   m_sharedMaterial: {fileID: -7799505781065842312, guid: a336bc5af0ab72e4aa4a06cbb4b2210c, type: 2}
@@ -9913,7 +9913,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Musica
+  m_text: "M\xFAsica"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12988,7 +12988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8971464185721937928, guid: a3669d19138935a4bb6065bf0aa84fa7, type: 3}
       propertyPath: m_text
-      value: Rotacion de Brazos
+      value: "Rotaci\xF3n de Brazos"
       objectReference: {fileID: 0}
     - target: {fileID: 8971464185721937928, guid: a3669d19138935a4bb6065bf0aa84fa7, type: 3}
       propertyPath: m_fontSize

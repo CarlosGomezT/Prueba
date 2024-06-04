@@ -8,11 +8,16 @@ public class SeguirMovimientos : MonoBehaviour
     public GameObject[] targetObject2;
 
     public GameObject[] objectToMove;
-
+    public static bool Izquierda;
     public GameObject[] side1;
     public GameObject[] side2;
 
     private bool isTarget1Active = true;
+
+    private void Start()
+    {
+        Izquierda = true;
+    }
     public void ChangeSide()
     {
         if (objectToMove != null && targetObject1 != null && targetObject2 != null)
@@ -65,6 +70,7 @@ public class SeguirMovimientos : MonoBehaviour
 
     public void ToggleTargets(bool side)
     {
+        Izquierda = side;  
         isTarget1Active = side;
         ChangeSide();
         ChangeHand();

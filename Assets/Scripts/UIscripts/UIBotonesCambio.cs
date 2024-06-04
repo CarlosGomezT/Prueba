@@ -7,10 +7,8 @@ public class UIBotonesCambio : MonoBehaviour
 {
     public Button[] buttonsElement;
     private Button selectedButton;
-
     private int Boton1;
     private int Boton2;
-
     public SetControles ControladorDeControles;
     private void Start()
     {
@@ -30,7 +28,6 @@ public class UIBotonesCambio : MonoBehaviour
             {
                 button.image.color = Color.cyan;
             }
-
             selectedButton = clickedButton;
             selectedButton.image.color = Color.yellow;
         }
@@ -45,12 +42,9 @@ public class UIBotonesCambio : MonoBehaviour
         {
             selectedButton.image.color = Color.green;
             selectedButton = clickedButton;
-
             selectedButton.image.color = Color.green;
             Debug.Log("NUMEROS Presionados: " + Boton1 + " y " + Boton2);
-
             ControladorDeControles.ArrangeScreenControls(Boton1, Boton2);
-            
             StartValuesEmplty();
         }
     }

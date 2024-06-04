@@ -7,6 +7,8 @@ public class WaitSeconds : MonoBehaviour
 {
     public float tiempoEspera; 
     public TMP_Text textoTemporizador;
+
+    public JoyConList JoyConList;
     public GameObject Manage;
     public GameObject Manage2;
     public GameObject Manage3;
@@ -29,6 +31,7 @@ public class WaitSeconds : MonoBehaviour
         Manage3.SetActive(true);
 
         tiempoRestante = tiempoEspera;
+        JoyConList.JCList[0].RecalibrateAllJoycons();
 
         while (tiempoRestante > 0)
         {
